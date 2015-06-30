@@ -1,0 +1,13 @@
+befault: features
+browser: --tags @browser
+headless: --tags "@headless_browser, @lots_of_people"
+both_browsers: --tags "@browser, @headless_browser"
+
+local: SITEROOT="http://example.local" --tags "@in_progress" HEADLESS="false"
+
+dev: SITEROOT="http://user:changeme@www-app1-dev.example.org" --tags "@production, @qa, @production" HEADLESS="true"
+
+qa: SITEROOT="http://user:changeme@www-qa.example.org" --tags "@qa, @production" HEADLESS="true"
+
+live: SITEROOT="http://example.org" --tags "@production" HEADLESS="true"
+
